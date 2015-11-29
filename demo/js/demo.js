@@ -1,0 +1,1 @@
+console.info('Demo static script loaded!');

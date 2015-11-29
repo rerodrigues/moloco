@@ -1,0 +1,1 @@
+console.info('Demo module 3 loaded!');
