@@ -1,0 +1,21 @@
+* {
+    font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+}
+
+body {
+    margin: 10px 20px;
+}
+
+abbr {
+    cursor: help;
+}
+
+pre {
+    margin : 0;
+    padding: 0;
+}
+
+code {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    font-size: 0.8em;
+}
