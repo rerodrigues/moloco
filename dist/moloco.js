@@ -18,7 +18,7 @@ var Moloco = function(options) {
     
     return {
         debug : inst.options.debug,
-        loadScript : function(scripts, callback) {
+        loadScripts : function(scripts, callback) {
             
             var addScript = function(scripts, callback) {
                 scripts = typeof scripts === 'object' ? scripts : [scripts];
@@ -45,7 +45,7 @@ var Moloco = function(options) {
                         addScript(scripts.slice(1), callback);
                     }
                 } else {
-                    if(inst.options.debug) { console.log('[callback loadScript]'); }
+                    if(inst.options.debug) { console.log('[callback loadScripts]'); }
                     callback();
                 }
             };
@@ -53,7 +53,7 @@ var Moloco = function(options) {
             addScript(scripts, callback);
         },
         
-        loadStyle : function(styles, callback) {
+        loadStyles : function(styles, callback) {
             
             var addStyle = function(styles, callback) {
                 var styleLoaded = false;
@@ -82,7 +82,7 @@ var Moloco = function(options) {
                         document.getElementsByTagName('head')[0].appendChild(styleElement);
                     }
                 } else {
-                    if(inst.options.debug) { console.log('[callback loadStyle]'); }
+                    if(inst.options.debug) { console.log('[callback loadStyles]'); }
                     callback();
                 }
             };
@@ -106,7 +106,7 @@ var Moloco = function(options) {
     }
     
     var moloco = new Moloco( {debug:true} );
-    moloco.loadScript(allScripts, function(){
+    moloco.loadScripts(allScripts, function(){
         if(moloco.debug) { console.info('MoLoCo: all modules loaded'); }
     });
 })();
