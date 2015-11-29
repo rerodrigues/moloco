@@ -41,11 +41,11 @@ scripts = [
     [ "/static/js/my_snipet/mobile_specific.js", window.isMobile ], /* loads only if mobile */
 ];
 
-moloco.loadStyle(styles, function() {
-    /* loadStyle callback */
+moloco.loadStyles(styles, function() {
+    /* loadStyles callback */
 
-    moloco.loadScript(scripts, function(){
-        /* loadScript callback */
+    moloco.loadScripts(scripts, function(){
+        /* loadScripts callback */
         
         /* at this point all dependecies are already loaded and you can safely start your application */
         mySnippet.init(); 
@@ -54,6 +54,9 @@ moloco.loadStyle(styles, function() {
 ```
 
 For a complete description and examples check the [loaderr](http://www.renatorodrigues.ninja/loaderr "Renato Rodrigues's Synchronous Module Loader") documentation.
+
+## Demo:
+To see MoLoCo in action check the [demo page](http://www.renatorodrigues.ninja/moloco).
 
 ## License:
 Use it as you wish. I would greatly appreciate if you keep the credits though.

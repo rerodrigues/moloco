@@ -27,6 +27,7 @@
         
         <h2>How it works:</h2>
         <p>MoLoCo looks in the current page for a specific hidden element and loads synchronously the module(s) listed in the value attribute of this element <small>(comma separated)</small>.</p>
+        <p id="example_box"><small>(in fact you can see it in action in the box immediately below)</small></p>
         
         <h2>How to use:</h2>
         <p>To use MoLoCo, just put a <code>&lt;input type="hidden" name="load-modules" value="yourmodule,module2,snippet3" /&gt;</code> and include the <em>moloco.js</em> script in your page.</p>
@@ -37,7 +38,8 @@
         <p>MoLoCo uses the same syntax of <abbr title="Renato Rodrigues's Synchronous Module Loader">loaderr</abbr> <small>(in fact it is an automated version of <em>loaderr</em>)</small></p>
         
         <h3>Example:</h3>
-        <pre>
+        <p><small>(the box below is stylized using Rainbow code highlighter dynamically injected by Loaderr)</small>
+        <pre data-language="javascript">
         <code>
         var styles = [
                 "/static/css/my_snipet/main.css" ,
@@ -53,17 +55,19 @@
                 [ "/static/js/my_snipet/mobile_specific.js", window.isMobile ], /* loads only if mobile */
             ];
     
-        moloco.loadStyle(styles, function() {
-            /* loadStyle callback */
+        moloco.loadStyles(styles, function() {
+            /* loadStyles callback */
             
-            moloco.loadScript(scripts, function(){
-                /* loadScript callback */
+            moloco.loadScripts(scripts, function(){
+                /* loadScripts callback */
                 
                 mySnippet.init(); /* at this point all dependecies are already loaded and you can safely start your application */
             });
         });
         </code>
         </pre>
+        
+        <p>Check the source code for more examples.</p>
         
         <p>For a complete description and examples check the <a href="http://www.renatorodrigues.ninja/loaderr">loaderr</a> documentation.</p>
         
@@ -76,6 +80,7 @@
         <span>MoLoCo is made by <a href="http://about.me/renato.rodrigues">Renato Rodrigues</a> and shared with you for free. Enjoy it!</span>
     </footer>
 
+    <script type="text/javascript" src="demo/js/dist/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="demo/js/demo.js"></script>
     
     <input type="hidden" name="load-modules" value="demo_module1,demo_module2" />
