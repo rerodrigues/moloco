@@ -19,3 +19,63 @@ code {
     font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
     font-size: 0.8em;
 }
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header, footer {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e2e2e2+0,dbdbdb+50,d1d1d1+51,fefefe+100;Grey+Gloss+%231 */
+    background: rgb(226,226,226); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+header, main, footer {
+    width: 960px;
+    margin: 20px auto;
+    border: 1px solid rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    padding: 10px 20px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+main > h2,
+main > h3 {
+    display: inline-block;
+    border-bottom: 3px solid #fff;
+    padding: 0 10px;
+    marging-bottom: 10px;
+}
+
+main > h2 + p, main > h2 + p + p,
+main > h3 + p, main > h3 + p + p {
+    margin: 0;
+    padding: 10px;
+}
+
+main > h2:hover,
+main > h3:hover {
+    cursor: pointer;
+    border-bottom: 3px solid #ccc;
+}
+
+main > h2:hover + p, main > h2:hover + p + p,
+main > h3:hover + p, main > h3:hover + p + p {
+    background: #e8e8e8;
+}
